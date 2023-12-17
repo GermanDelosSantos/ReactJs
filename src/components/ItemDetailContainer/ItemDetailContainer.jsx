@@ -24,7 +24,7 @@ return (
     {loading ? (
         <h2 className="text-center text-4xl mt-8">Cargando...</h2>
     ) : (
-        <ItemList productos={productos} />
+        <ItemDetail item={item} />
     )}
     </>
 );

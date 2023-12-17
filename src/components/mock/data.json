@@ -5,7 +5,8 @@
     "price": "$9.99",
     "image": "/src/assets/productsImg/inception.jpg",
     "imageAlt": "Escena de la película Inception.",
-    "category": "movies"
+    "category": "movies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
   },
   {
     "id": 2,
@@ -14,7 +15,9 @@
     "price": "$12",
     "image": "/src/assets/productsImg/shawshank.jpg",
     "imageAlt": "Escena de la película Shawshank.",
-    "category": "movies"
+    "category": "movies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
 
   },
   {
@@ -24,7 +27,9 @@
     "price": "$12",
     "image": "/src/assets/productsImg/pulpFiction.jpg",
     "imageAlt": "Escena de la película Pulp Fiction.",
-    "category": "movies"
+    "category": "movies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
 
   },
   {
@@ -34,7 +39,9 @@
     "price": "$8.99",
     "image": "/src/assets/productsImg/godFather.png",
     "imageAlt": "Escena de la película El Padrino.",
-    "category": "movies"
+    "category": "movies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
 
   },
   {
@@ -44,7 +51,9 @@
     "price": "$10.99",
     "image": "/src/assets/productsImg/interstellar.jpg",
     "imageAlt": "Escena de la película Interstellar.",
-    "category": "movies"
+    "category": "movies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
 
   },
   {
@@ -54,7 +63,9 @@
     "price": "$11.99",
     "image": "/src/assets/productsImg/darkKnight.jpg",
     "imageAlt": "Escena de la película The Dark Knight.",
-    "category": "movies"
+    "category": "movies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
 
   },
   {
@@ -64,7 +75,9 @@
     "price": "$14.99",
     "image": "/src/assets/productsImg/forrestGump.jpg",
     "imageAlt": "Escena de la película Forrest Gump.",
-    "category": "movies"
+    "category": "movies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
 
   },
   {
@@ -74,7 +87,9 @@
     "price": "$9.99",
     "image": "/src/assets/productsImg/matrix.jpg",
     "imageAlt": "Escena de la película The Matrix.",
-    "category": "movies"
+    "category": "movies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
 
   },
   {
@@ -84,7 +99,9 @@
     "price": "$24.99",
     "image": "/src/assets/productsImg/advengers.png",
     "imageAlt": "Escena de la película Avengers: Endgame.",
-    "category": "movies"
+    "category": "movies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
 
   },
   {
@@ -94,7 +111,9 @@
     "price": "$16.99",
     "image": "/src/assets/productsImg/titanic.png",
     "imageAlt": "Escena de la película Titanic.",
-    "category": "movies"
+    "category": "movies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
 
   },{
     "id": 11 ,
@@ -102,7 +121,9 @@
     "href": "#",
     "price": "$15.99",
     "image": "/src/assets/productsImg/strangerThings.jpg",
-    "imageAlt": "Escena de la serie Stranger Things."
+    "imageAlt": "Escena de la serie Stranger Things.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
 
   },
   {
@@ -112,7 +133,9 @@
     "price": "$14.99",
     "image": "/src/assets/productsImg/breakingBad.png",
     "imageAlt": "Escena de la serie Breaking Bad.",
-    "category": "series"
+    "category": "series",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
   },
   {
     "id": 13,
@@ -121,7 +144,9 @@
     "price": "$18.99",
     "image": "/src/assets/productsImg/theCrown.png",
     "imageAlt": "Escena de la serie The Crown.",
-    "category": "series"
+    "category": "series",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
   },
   {
     "id": 14,
@@ -130,7 +155,9 @@
     "price": "$22.99",
     "image": "/src/assets/productsImg/got.jpg",
     "imageAlt": "Escena de la serie Game of Thrones.",
-    "category": "series"
+    "category": "series",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
 
   },
   {
@@ -140,7 +167,9 @@
     "price": "$17.99",
     "image": "/src/assets/productsImg/friends.jpg",
     "imageAlt": "Escena de la serie Friends.",
-    "category": "series"
+    "category": "series",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
 
   },
   {
@@ -150,7 +179,9 @@
     "price": "$19.99",
     "image": "/src/assets/productsImg/mandalorian.jpg",
     "imageAlt": "Escena de la serie The Mandalorian.",
-    "category": "series"
+    "category": "series",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
 
   },
   {
@@ -160,7 +191,9 @@
     "price": "$16.99",
     "image": "/src/assets/productsImg/blackMirror.jpg",
     "imageAlt": "Escena de la serie Black Mirror.",
-    "category": "series"
+    "category": "series",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
     
   },
   {
@@ -170,7 +203,9 @@
     "price": "$13.99",
     "image": "/src/assets/productsImg/laCasa.jpg",
     "imageAlt": "Escena de la serie La Casa de Papel.",
-    "category": "series"
+    "category": "series",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
   },
   {
     "id": 19,
@@ -179,7 +214,9 @@
     "price": "$21.99",
     "image": "/src/assets/productsImg/witcher.jpg",
     "imageAlt": "Escena de la serie The Witcher.",
-    "category": "series"
+    "category": "series",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
   },
   {
     "id": 20,
@@ -188,6 +225,8 @@
     "price": "$14.99",
     "image": "/src/assets/productsImg/office.jpg",
     "imageAlt": "Escena de la serie The Offi.",
-    "category": "series"
+    "category": "series",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique justo vel massa fermentum, a bibendum urna auctor. Proin vitae tortor ac sapien ullamcorper cursus. Maecenas ac nunc sed quam hendrerit convallis. Quisque ultricies justo vel mi lacinia, in congue quam pulvinar. Integer auctor ultricies ligula."
+
   }
 ]
