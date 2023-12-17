@@ -1,5 +1,4 @@
-import Boton from "../../ejemplos/Boton";
-
+import Button from '../utilidades/Button'
 
 const ItemDetail = ({ item }) => {
 
@@ -16,7 +15,7 @@ return (
         </div>
     </div>
 
-    <Boton className="bg-green-400">Agregar al carrito</Boton>
+    <Button className="bg-green-400">Agregar al carrito</Button>
     </div>
 );
 };

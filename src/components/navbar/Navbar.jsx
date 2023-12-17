@@ -1,7 +1,26 @@
 import '../navbar/navBar.css'
 import { FaCartPlus } from "react-icons/fa";
-import NavLink from './Navlink'
 import logo from '../../assets/react.svg'
+import { Link, NavLink } from "react-router-dom";
+
+const links = [
+    {
+    label: "Inicio",
+    href: "/",
+    },
+    {
+    label: "Movies",
+    href: "/category/movies",
+    },
+    {
+    label: "Series",
+    href: "/category/series",
+    },
+];
+
+
+
+
 export function navBar (){
 
     return (
@@ -10,16 +29,22 @@ export function navBar (){
                 <img src={logo} alt="Logo"/>
 
                 <nav className="flex gap-4">
-                    <NavLink href={"#"} text={"Movies"}/>
-                    <NavLink href={"#"} text={"Series"}/>
-                    <NavLink href={"#"} text={"List"}/>
-                    <a className="text-white hover:text-teal-400 text-lg uppercase font-semibold">
+                {links.map ((link) =>
+                    <NavLink
+                        key={link.href}
+                        to={link.href}
+                        className={({ isActive }) => (
+                `text-lg uppercase font-semibold ${isActive ? "text-purple-400" : "text-white"}`
+            )}
+            >
+            
+            {link.label}
+            </NavLink>
+                )}  
                     <span>
                     <FaCartPlus />
                     1
                     </span>
-                    </a>
-
                 </nav>
 
             </div>

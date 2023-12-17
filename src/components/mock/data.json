@@ -3,158 +3,191 @@
     "name": "Inception",
     "href": "#",
     "price": "$9.99",
-    "imageSrc": "src/assets/productsImg/inception.jpg",
-    "imageAlt": "Escena de la película Inception."
+    "image": "/src/assets/productsImg/inception.jpg",
+    "imageAlt": "Escena de la película Inception.",
+    "category": "movies"
   },
   {
     "id": 2,
     "name": "The Shawshank Redemption",
     "href": "#",
     "price": "$12",
-    "imageSrc": "src/assets/productsImg/shawshank.jpg",
-    "imageAlt": "Escena de la película Shawshank."
+    "image": "/src/assets/productsImg/shawshank.jpg",
+    "imageAlt": "Escena de la película Shawshank.",
+    "category": "movies"
+
   },
   {
     "id": 3,
     "name": "Pulp Fiction",
     "href": "#",
     "price": "$12",
-    "imageSrc": "src/assets/productsImg/pulpFiction.jpg",
-    "imageAlt": "Escena de la película Pulp Fiction."
+    "image": "/src/assets/productsImg/pulpFiction.jpg",
+    "imageAlt": "Escena de la película Pulp Fiction.",
+    "category": "movies"
+
   },
   {
     "id": 4,
     "name": "The Godfather",
     "href": "#",
     "price": "$8.99",
-    "imageSrc": "src/assets/productsImg/godFather.png",
-    "imageAlt": "Escena de la película El Padrino."
+    "image": "/src/assets/productsImg/godFather.png",
+    "imageAlt": "Escena de la película El Padrino.",
+    "category": "movies"
+
   },
   {
     "id": 5,
     "name": "Interstellar",
     "href": "#",
     "price": "$10.99",
-    "imageSrc": "src/assets/productsImg/interstellar.jpg",
-    "imageAlt": "Escena de la película Interstellar."
+    "image": "/src/assets/productsImg/interstellar.jpg",
+    "imageAlt": "Escena de la película Interstellar.",
+    "category": "movies"
+
   },
   {
     "id": 6,
     "name": "The Dark Knight",
     "href": "#",
     "price": "$11.99",
-    "imageSrc": "src/assets/productsImg/darkKnight.jpg",
-    "imageAlt": "Escena de la película The Dark Knight."
+    "image": "/src/assets/productsImg/darkKnight.jpg",
+    "imageAlt": "Escena de la película The Dark Knight.",
+    "category": "movies"
+
   },
   {
     "id": 7,
     "name": "Forrest Gump",
     "href": "#",
     "price": "$14.99",
-    "imageSrc": "src/assets/productsImg/forrestGump.jpg",
-    "imageAlt": "Escena de la película Forrest Gump."
+    "image": "/src/assets/productsImg/forrestGump.jpg",
+    "imageAlt": "Escena de la película Forrest Gump.",
+    "category": "movies"
+
   },
   {
     "id": 8,
     "name": "The Matrix",
     "href": "#",
     "price": "$9.99",
-    "imageSrc": "src/assets/productsImg/matrix.jpg",
-    "imageAlt": "Escena de la película The Matrix."
+    "image": "/src/assets/productsImg/matrix.jpg",
+    "imageAlt": "Escena de la película The Matrix.",
+    "category": "movies"
+
   },
   {
     "id": 9,
     "name": "Avengers: Endgame",
     "href": "#",
     "price": "$24.99",
-    "imageSrc": "src/assets/productsImg/avengers.png",
-    "imageAlt": "Escena de la película Avengers: Endgame."
+    "image": "/src/assets/productsImg/advengers.png",
+    "imageAlt": "Escena de la película Avengers: Endgame.",
+    "category": "movies"
+
   },
   {
     "id": 10,
     "name": "Titanic",
     "href": "#",
     "price": "$16.99",
-    "imageSrc": "src/assets/productsImg/titanic.png",
-    "imageAlt": "Escena de la película Titanic."
+    "image": "/src/assets/productsImg/titanic.png",
+    "imageAlt": "Escena de la película Titanic.",
+    "category": "movies"
+
   },{
     "id": 11 ,
     "name": "Stranger Things",
     "href": "#",
     "price": "$15.99",
-    "imageSrc": "src/assets/productsImg/strangerThings.jpg",
+    "image": "/src/assets/productsImg/strangerThings.jpg",
     "imageAlt": "Escena de la serie Stranger Things."
+
   },
   {
     "id": 12,
     "name": "Breaking Bad",
     "href": "#",
     "price": "$14.99",
-    "imageSrc": "src/assets/productsImg/breakingBad.png",
-    "imageAlt": "Escena de la serie Breaking Bad."
+    "image": "/src/assets/productsImg/breakingBad.png",
+    "imageAlt": "Escena de la serie Breaking Bad.",
+    "category": "series"
   },
   {
     "id": 13,
     "name": "The Crown",
     "href": "#",
     "price": "$18.99",
-    "imageSrc": "src/assets/productsImg/theCrown.png",
-    "imageAlt": "Escena de la serie The Crown."
+    "image": "/src/assets/productsImg/theCrown.png",
+    "imageAlt": "Escena de la serie The Crown.",
+    "category": "series"
   },
   {
     "id": 14,
     "name": "Game of Thrones",
     "href": "#",
     "price": "$22.99",
-    "imageSrc": "src/assets/productsImg/got.jpg",
-    "imageAlt": "Escena de la serie Game of Thrones."
+    "image": "/src/assets/productsImg/got.jpg",
+    "imageAlt": "Escena de la serie Game of Thrones.",
+    "category": "series"
+
   },
   {
     "id": 15,
     "name": "Friends",
     "href": "#",
     "price": "$17.99",
-    "imageSrc": "src/assets/productsImg/friends.jpg",
-    "imageAlt": "Escena de la serie Friends."
+    "image": "/src/assets/productsImg/friends.jpg",
+    "imageAlt": "Escena de la serie Friends.",
+    "category": "series"
+
   },
   {
     "id": 16,
     "name": "The Mandalorian",
     "href": "#",
     "price": "$19.99",
-    "imageSrc": "src/assets/productsImg/mandalorian.jpg",
-    "imageAlt": "Escena de la serie The Mandalorian."
+    "image": "/src/assets/productsImg/mandalorian.jpg",
+    "imageAlt": "Escena de la serie The Mandalorian.",
+    "category": "series"
+
   },
   {
     "id": 17,
     "name": "Black Mirror",
     "href": "#",
     "price": "$16.99",
-    "imageSrc": "src/assets/productsImg/blackMirror.jpg",
-    "imageAlt": "Escena de la serie Black Mirror."
+    "image": "/src/assets/productsImg/blackMirror.jpg",
+    "imageAlt": "Escena de la serie Black Mirror.",
+    "category": "series"
+    
   },
   {
     "id": 18,
     "name": "La Casa de Papel",
     "href": "#",
     "price": "$13.99",
-    "imageSrc": "src/assets/productsImg/laCasa.jpg",
-    "imageAlt": "Escena de la serie La Casa de Papel."
+    "image": "/src/assets/productsImg/laCasa.jpg",
+    "imageAlt": "Escena de la serie La Casa de Papel.",
+    "category": "series"
   },
   {
     "id": 19,
     "name": "The Witcher",
     "href": "#",
     "price": "$21.99",
-    "imageSrc": "src/assets/productsImg/witcher.jpg",
-    "imageAlt": "Escena de la serie The Witcher."
+    "image": "/src/assets/productsImg/witcher.jpg",
+    "imageAlt": "Escena de la serie The Witcher.",
+    "category": "series"
   },
   {
     "id": 20,
     "name": "The Office",
     "href": "#",
     "price": "$14.99",
-    "imageSrc": "src/assets/productsImg/.jpg",
-    "imageAlt": "Escena de la serie The Offi."
+    "image": "/src/assets/productsImg/office.jpg",
+    "imageAlt": "Escena de la serie The Offi.",
+    "category": "series"
   }
 ]
