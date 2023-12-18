@@ -3,19 +3,20 @@ import Button from '../utilidades/Button'
 const ItemDetail = ({ item }) => {
 
 return (
-    <div className="container m-auto mt-8">
+    <div className="container m-auto mt-8 w-full ">
     <h3 className="text-2xl font-semibold">{item.name}</h3>
     <hr />
     <div className="flex gap-8 pt-4">
-        <img src={item.image} alt={item.imageAlt} className='h-64 w-4/6 object-cover'/>
+        <img src={item.image} alt={item.imageAlt} className='h-2/3 w-5/6 object-cover'/>
 
         <div>
-        <p className='w-30'>{item.description}</p>
-        <p className="text-xl font-bold ">Precio: {item.price}</p>
+        <p className='w-1/3 m-4'>{item.description}</p>
+        <p className="text-xl font-bold text-start">Precio: {item.price}</p>
+    <Button className="bg-teal-400 text-neutral-900 text-center flex m-4">Agregar al carrito</Button>
+
         </div>
     </div>
 
-    <Button className="bg-teal-400 text-neutral-900">Agregar al carrito</Button>
     </div>
 );
 };

@@ -26,7 +26,7 @@ export function navBar (){
     return (
         <header className="bg-gray-600">
             <div className="container m-auto py-6 flex justify-between items-center">
-                <img src={logo} alt="Logo"/>
+                <a href="/"> <img src={logo} alt="Logo"/></a>
 
                 <nav className="flex gap-4">
                 {links.map ((link) =>
