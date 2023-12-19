@@ -5,7 +5,7 @@ import './itemCard.css'
 const ItemCard = ({item}) => {
 
     return (
-        <article className="itemBox w-80 justify-center align-middle flex flex-col rounded">
+        <article className="itemBox w-80 justify-center align-middle flex flex-col rounded-md">
         <div className=" bg-blue-200">
         <img src={item.image} alt={item.imageAlt} className=" h-64 w-44 justify-center inline m-4"/>
         </div>
@@ -14,7 +14,7 @@ const ItemCard = ({item}) => {
         <hr />
         <p className="text-xl font-bold p-2 text-start  ">Precio: {item.price}</p>
         </div>
-        <Button className="bg-indigo-600 text-white">
+        <Button className="cardBtn bg-indigo-700 text-white">
             <Link to={`/item/${item.id}`}>Ver más</Link>
         </Button>
         </article>
