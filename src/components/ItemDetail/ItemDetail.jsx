@@ -1,9 +1,17 @@
 import Button from '../utilidades/Button'
 import './itemDetail.css'
+import { useNavigate } from "react-router-dom";
+
 const ItemDetail = ({ item }) => {
+    const navigate = useNavigate()
+
+    const handleVolver = () => {
+        navigate(-1)
+    }
 
 return (
     <div className="container m-auto mt-8 w-full ">
+    <Button onClick={handleVolver} className='fixed top-21 left-2 bg-neutral-600 text-white'> Volver</Button>
     <h3 className="text-2xl font-semibold">{item.name}</h3>
     <hr />
     <div className="flex gap-8 pt-4">
