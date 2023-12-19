@@ -1,5 +1,5 @@
 import Button from '../utilidades/Button'
-
+import './itemDetail.css'
 const ItemDetail = ({ item }) => {
 
 return (
@@ -7,12 +7,12 @@ return (
     <h3 className="text-2xl font-semibold">{item.name}</h3>
     <hr />
     <div className="flex gap-8 pt-4">
-        <img src={item.image} alt={item.imageAlt} className='h-2/3 w-5/6 object-cover'/>
+        <img src={item.image} alt={item.imageAlt} className='itemImg h-2/3 w-3/6'/>
 
-        <div>
-        <p className='w-1/3 m-4'>{item.description}</p>
-        <p className="text-xl font-bold text-start">Precio: {item.price}</p>
-    <Button className="bg-teal-400 text-neutral-900 text-center flex m-4">Agregar al carrito</Button>
+        <div className='itemText'>
+        <p className=' m-4'>{item.description}</p>
+        <p className="text-xl font-bold text-start m-4">Precio: {item.price}</p>
+        <Button className="itemBtn bg-teal-400 text-neutral-900 text-center flex m-4">Agregar al carrito</Button>
 
         </div>
     </div>
@@ -20,7 +20,7 @@ return (
     </div>
 );
 };
-
+//h-2/3 w-5/6 object-cover
 export default ItemDetail;
 
 /*

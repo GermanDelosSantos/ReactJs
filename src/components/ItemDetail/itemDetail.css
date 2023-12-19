@@ -1,0 +1,12 @@
+.itemImg{
+    width: 33%;
+    height: 30%;
+}
+
+.itemText{
+    width: 50%;
+}
+
+.itemBtn{
+    justify-content: flex-end;
+}
