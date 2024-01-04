@@ -1,9 +1,23 @@
+import { useContext, useState } from "react";
 import Button from '../utilidades/Button'
-import './itemDetail.css'
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
+import QuantitySelector from "./QuantitySelector";
+import { Link} from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
     const navigate = useNavigate()
+    const [cantidad, setCantidad] = useState(1)
+    const { addToCart, isInCart } = useContext(CartContext)
+
+    const handleAgregar = () => {
+        const itemToCart = {
+        ...item,
+          cantidad, // => cantidad: cantidad
+        }
+    
+        addToCart(itemToCart)
+    }
 
     const handleVolver = () => {
         navigate(-1)
@@ -11,36 +25,34 @@ const ItemDetail = ({ item }) => {
 
 return (
     <div className="container m-auto mt-8 w-full ">
-    <Button onClick={handleVolver} className='fixed top-21 left-2 bg-neutral-600 text-white'> Volver</Button>
+    <Button onClick={handleVolver} className='btnVolver fixed top-21 left-2 rounded-md text-white'> Volver</Button>
     <h3 className="text-2xl font-semibold">{item.name}</h3>
     <hr />
-    <div className="flex gap-8 pt-4">
-        <img src={item.image} alt={item.imageAlt} className='itemImg h-2/3 w-3/6'/>
+    <div className="cardContainer flex gap-8 pt-4">
+        <div className="h-52 w-60">
+        <img src={item.image} alt={item.imageAlt} className='itemImg '/>
 
-        <div className='itemText'>
+        </div>
+
+        <div className='itemText w-1/4'>
         <p className=' m-4'>{item.description}</p>
-        <p className="text-xl font-bold text-start m-4">Precio: {item.price}</p>
-        <Button className="itemBtn bg-teal-400 text-neutral-900 text-center flex m-4">Agregar al carrito</Button>
-
+        <p className="text-xl font-bold text-start m-4">Precio: ${item.price}</p>
+        {
+            isInCart( item.id )
+            ? <Button className="rounded-md bg-gray-300"><Link to="/cart">Terminar mi compra</Link></Button>
+            : <>
+                <QuantitySelector 
+                    cantidad={cantidad}
+                    stock={item.stock}
+                    setCantidad={ setCantidad }
+                />          
+                <Button onClick={handleAgregar} disabled={item.stock === 0} className="bg-gray-300 rounded-md m-5 ">Agregar al carrito</Button>
+                </>
+        }
         </div>
     </div>
 
     </div>
 );
 };
-//h-2/3 w-5/6 object-cover
 export default ItemDetail;
-
-/*
-<div >
-    <img src={item.image} alt={item.imageAlt} className="productImg h-64 w-44 justify-center content-center "/>
-    </div>
-    <div className="justify-start">
-    <h3 className="text-1xl font-semibold m-4 p-2 ">{item.name}</h3>
-    <hr />
-    <p className="text-xl font-bold">Precio: {item.price}</p>
-    </div>
-    <Button>
-        <Link to={`/item/${item.id}`}>Ver más</Link>
-    </Button>
-*/

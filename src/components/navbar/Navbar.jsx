@@ -2,7 +2,7 @@ import '../navbar/navBar.css'
 import { FaCartPlus } from "react-icons/fa";
 import logo from '../../assets/react.svg'
 import { Link, NavLink } from "react-router-dom";
-
+import CartWidget from './CartWidget';
 const links = [
     {
     label: "Inicio",
@@ -40,11 +40,8 @@ export function navBar (){
             
             {link.label}
             </NavLink>
-                )}  
-                    <span>
-                    <FaCartPlus />
-                    1
-                    </span>
+                )} 
+                <CartWidget />
                 </nav>
 
             </div>
