@@ -34,8 +34,8 @@ return (
 
         </div>
 
-        <div className='itemText w-1/4'>
-        <p className=' m-4'>{item.description}</p>
+        <div className='itemText w-2/4 text-center'>
+        <p className=' m-4 text-center'>{item.description}</p>
         <p className="text-xl font-bold text-start m-4">Precio: ${item.price}</p>
         {
             isInCart( item.id )
@@ -46,7 +46,7 @@ return (
                     stock={item.stock}
                     setCantidad={ setCantidad }
                 />          
-                <Button onClick={handleAgregar} disabled={item.stock === 0} className="bg-gray-300 rounded-md m-5 ">Agregar al carrito</Button>
+                <Button onClick={handleAgregar} disabled={item.stock === 0} className="bg-gray-300 rounded-md m-5 hover:bg-green-400">Agregar al carrito</Button>
                 </>
         }
         </div>
