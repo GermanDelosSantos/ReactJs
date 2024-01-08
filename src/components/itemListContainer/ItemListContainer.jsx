@@ -1,27 +1,30 @@
 import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList";
-import { pedirDatos } from "../utilidades/utilidades";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 const ItemListContainer = () => {
 const [productos, setProductos] = useState([])
 const [loading, setLoading] = useState(true)
 
 const { categoryId } = useParams()
-console.log(categoryId)
 
 useEffect(() => {
     setLoading(true)
 
-      pedirDatos() // <= Promise
-        .then((data) => {
-            const items = categoryId 
-                            ? data.filter(prod => prod.category === categoryId)
-                            : data
+    const productRef = collection(db, 'productos')
+    const q = categoryId ? query( productRef, where( 'category', '==', categoryId) ) : productRef
 
-            setProductos(items)
-        })
-        .finally(() => setLoading( false ))
+    getDocs( q )
+    .then((querySnapShot)=> {
+        const docs = querySnapShot.docs.map(doc => ({...doc.data(), id: doc.id}))
+
+        console.log(docs)
+        setProductos( docs )
+    })
+
+    .finally( () => setLoading(false))
 }, [categoryId])
 
 return (
