@@ -7,15 +7,15 @@ export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
 
     const addToCart = (item) => {
-    setCart([...cart, item])
+        setCart([...cart, item])
     }
 
     const isInCart = (id) => {
-    return cart.some(item => item.id === id)
+        return cart.some(item => item.id === id)
     }
 
     const clearCart = () => {
-    setCart([])
+        setCart([])
     }
 
     const itemsInCart = () => {
@@ -23,11 +23,12 @@ export const CartProvider = ({ children }) => {
     }
 
     const totalCart = () => {
-        return cart.reduce((acc, item) => acc + (item.cantidad * item.price), 0)
+        const sum = cart.reduce((acc, item) => acc + (item.cantidad * item.price), 0);
+        return parseFloat(sum.toFixed(2));
     }
 
     const removeItem = (id) => {
-        setCart( cart.filter(item => item.id !== id) )
+        setCart(cart.filter(item => item.id !== id))
     }
 
     return (
