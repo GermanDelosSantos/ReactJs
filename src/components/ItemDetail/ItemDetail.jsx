@@ -24,11 +24,11 @@ const ItemDetail = ({ item }) => {
     }
 
     return (
-        <div className="container m-auto mt-8 w-full ">
+        <div className="container m-auto mt-8 w-full max-[600px]:flex flex-col">
             <Button onClick={handleVolver} className='btnVolver fixed top-21 left-2 rounded-md text-white'> Volver</Button>
             <h3 className="text-2xl font-semibold">{item.name}</h3>
             <hr />
-            <div className="cardContainer flex gap-8 pt-4">
+            <div className="cardContainer flex gap-8 pt-4 ">
                 <div className="h-52 w-60 flex flex-col m-5">
                     <img src={item.image} alt={item.imageAlt} className='itemImg gap-4 m-5 ' />
 
@@ -47,8 +47,8 @@ const ItemDetail = ({ item }) => {
 
                 </div>
 
-                <div className='itemText w-2/4 text-center flex flex-col'>
-                    <p className=' m-4 text-center'>{item.description}</p>
+                <div className='itemText w-2/4 text-center flex flex-col max-[600px]:w-full'>
+                    <p className=' m-4 text-center max-[600px]:m-8 gap-3'>{item.description}</p>
                     <p className="text-xl font-bold text-start m-4">Precio: ${item.price}</p>
 
                 </div>

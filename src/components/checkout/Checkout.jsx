@@ -1,15 +1,16 @@
-import { useContext, useState } from "react"
+import { useContext, useState, useRef } from "react"
 import { CartContext } from "../../context/CartContext"
 import { db } from "../../firebase/config"
 import { collection, addDoc } from "firebase/firestore"
+import emailjs from '@emailjs/browser';
 
 const Checkout = () => {
     const { cart, totalCart, clearCart } = useContext(CartContext)
-
+    const form = useRef();
     const [values, setValues] = useState({
-        nombre: '',
-        direccion: '',
-        email: ''
+        user_name: '',
+        user_dir: '',
+        user_email: ''
     })
 
     const [orderId, setOrderId] = useState(null);
@@ -23,28 +24,48 @@ const Checkout = () => {
         })
     }
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
-
+    
         const orden = {
             cliente: values,
             items: cart.map((item) => ({
                 name: item.name,
                 price: item.price,
-                quantity: item.cantidad})),
+                quantity: item.cantidad
+            })),
             total: totalCart(),
             fecha: new Date()
         }
-
+    
+        console.log("orden:", orden);
+    
+        const teamplateParams = {
+            from_name: 'Videos Usados',
+            user_email: values.user_dir,
+            user_name: values.user_name,
+            user_id: orderId,
+            user_dir: values.user_dir,
+            user_order: cart.map(item => `${item.name} (${item.cantidad} x $${item.price})`).join(', '),
+        };
+    
+        console.log("teamplateParams:", teamplateParams);
+    
+        emailjs.sendForm('service_o118go3', 'template_w4o7k4o', form.current ,'M7NqcsBEyzAw0i9Je', teamplateParams)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    
         const ordersRef = collection(db, 'orders')
-        
+    
         addDoc(ordersRef, orden).then((doc) => {
             setOrderId(doc.id)
-            clearCart()
-    
+            clearCart();
         });
-        
-        };
+    };
 
 
 
@@ -63,11 +84,29 @@ const Checkout = () => {
         <div className="container m-auto mt-10">
             <h2 className="text-4xl font-semibold">Checkout</h2>
 
-            <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md">
-                <input className="border p-2" type="text" placeholder="Nombre" value={values.nombre} onChange={handleInputChange} name="nombre" />
-                <input className="border p-2" type="text" placeholder="Direccion" value={values.direccion} onChange={handleInputChange} name="direccion" />
-                <input className="border p-2" type="email" placeholder="Email" value={values.email} onChange={handleInputChange} name="email" />
-                <button className="bg-blue-400 rounded-mt text-white py-2" type="sumbit">Enviar</button>
+            {/* <form ref={form} onSubmit={handleSubmit}>
+                <label>Name</label>
+                <input type="text" name="user_name" onChange={handleInputChange} />
+                <label>direccion</label>
+                <input type="text" name="user_dir" onChange={handleInputChange} />
+                <label>Email</label>
+                <input type="email" name="user_email" onChange={handleInputChange} />
+                <label>Message</label>
+                <textarea name="message" />
+                <input type="submit" value="Send" />
+            </form> */}
+
+            <form ref={form} onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md">
+                <input className="border p-2" type="text" 
+                placeholder="Nombre"
+                value={values.user_name} onChange={handleInputChange} name="user_name" />
+                <input className="border p-2" type="text"
+                placeholder="Direccion" 
+                value={values.user_dir} onChange={handleInputChange} name="user_dir" />
+                <input className="border p-2" type="email" 
+                placeholder="Email" 
+                value={values.user_email} onChange={handleInputChange} name="user_email" />
+                <button className="bg-blue-400 rounded-mt text-white py-2" type="sumbit" value={"send"}>Enviar</button>
 
 
             </form>
