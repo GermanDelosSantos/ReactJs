@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext"
 import { db } from "../../firebase/config"
 import { collection, addDoc } from "firebase/firestore"
-
+// import emailjs from "emailjs-com";
 const Modal = () => {
     const [showModal, setShowModal] = useState(true);
 
