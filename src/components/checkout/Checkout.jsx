@@ -1,33 +1,21 @@
-import { useContext, useState, useRef} from "react"
-// import { useHistory } from 'react-router-dom';
+import { useContext, useState, useRef } from "react"
 import { CartContext } from "../../context/CartContext"
 import { db } from "../../firebase/config"
 import { collection, addDoc } from "firebase/firestore"
-import emailjs from '@emailjs/browser';
-// import Modal from "./Modal";
+import { Link } from "react-router-dom";
+// import emailjs from '@emailjs/browser';
+import Modal from "./Modal";
 
 const Checkout = () => {
     const { cart, totalCart, clearCart } = useContext(CartContext)
     const form = useRef();
-    // const history = useHistory();
     const [values, setValues] = useState({
         user_name: '',
         user_dir: '',
         user_email: ''
     })
 
-    // useEffect(() => {
-    //     // Verifica si la ruta actual es /checkout y abre el modal
-    //     if (history.location.pathname === '/checkout') {
-    //         setIsModalOpen(true);
-    //     } else {
-    //         setIsModalOpen(false);
-    //     }
-    // }, [history.location.pathname]);
 
-    // const closeModal = () => {
-    //     setIsModalOpen(false);
-    // };
 
     const [orderId, setOrderId] = useState(null);
 
@@ -57,23 +45,23 @@ const Checkout = () => {
 
         console.log("orden:", orden);
 
-        const teamplateParams = {
-            from_name: 'Videos Usados',
-            user_email: values.user_dir,
-            user_name: values.user_name,
-            user_id: orderId,
-            user_dir: values.user_dir,
-            user_order: cart.map(item => `${item.name} (${item.cantidad} x $${item.price})`).join(', '),
-        };
+        // const teamplateParams = {
+        //     from_name: 'Videos Usados',
+        //     user_email: values.user_dir,
+        //     user_name: values.user_name,
+        //     user_id: orderId,
+        //     user_dir: values.user_dir,
+        //     user_order: cart.map(item => `${item.name} (${item.cantidad} x $${item.price})`).join(', '),
+        // };
 
-        console.log("teamplateParams:", teamplateParams);
+        // console.log("teamplateParams:", teamplateParams);
 
-        emailjs.sendForm('service_o118go3', 'template_w4o7k4o', form.current, 'M7NqcsBEyzAw0i9Je', teamplateParams)
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+        // emailjs.sendForm('service_o118go3', 'template_w4o7k4o', form.current, 'M7NqcsBEyzAw0i9Je', teamplateParams)
+        //     .then((result) => {
+        //         console.log(result.text);
+        //     }, (error) => {
+        //         console.log(error.text);
+        //     });
 
         const ordersRef = collection(db, 'orders')
 
@@ -81,14 +69,13 @@ const Checkout = () => {
             setOrderId(doc.id)
             clearCart();
         });
-        // closeModal();
     };
 
 
 
     if (orderId) {
         return (
-            <div className="container m-auto mt-10">
+            <div >
                 <h2 className="text-4xl font-semibold">Gracias por tu compra</h2>
                 <hr />
                 <p>Tu código de orden es: {orderId}</p>
@@ -98,35 +85,40 @@ const Checkout = () => {
 
 
     return (
-        <div className="container m-auto mt-10">
-            {/* <Modal
-                    isOpen={isModalOpen}
-                    closeModal={closeModal}
-                    handleSubmit={handleSubmit}
-                    handleInputChange={handleInputChange}
-            /> */}
-            <h2 className="text-4xl font-semibold">Checkout</h2>
+        <>
+        <Modal></Modal>
+        </>
+        // <div className="container m-auto mt-10 ">
+        //     <h2 className="text-4xl font-semibold">Checkout</h2>
+
+        //     <form ref={form} onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md">
+        //         <input 
+        //             className="border p-2" 
+        //             type="text"
+        //             placeholder="Nombre"
+        //             value={values.user_name} 
+        //             onChange={handleInputChange} 
+        //             name="user_name" />
+        //         <input 
+        //             className="border p-2"
+        //             type="text"
+        //             placeholder="Direccion"
+        //             value={values.user_dir}
+        //             onChange={handleInputChange}
+        //             name="user_dir" />
+        //         <input
+        //             className="border p-2"
+        //             placeholder="Email"
+        //             value={values.user_email} 
+        //             onChange={handleInputChange} 
+        //             name="user_email" />
+        //         <button className="bg-blue-400 rounded-mt text-white py-2" type="sumbit" value={"send"}>Enviar</button>
 
 
+        //     </form>
 
-            <form ref={form} onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md">
-                <input className="border p-2" type="text"
-                    placeholder="Nombre"
-                    value={values.user_name} onChange={handleInputChange} name="user_name" />
-                <input className="border p-2" type="text"
-                    placeholder="Direccion"
-                    value={values.user_dir} onChange={handleInputChange} name="user_dir" />
-                <input className="border p-2" type="email"
-                    placeholder="Email"
-                    value={values.user_email} onChange={handleInputChange} name="user_email" />
-                <button className="bg-blue-400 rounded-mt text-white py-2" type="sumbit" value={"send"}>Enviar</button>
+        // <Modal></Modal>
 
-
-            </form>
-
-
-
-        </div>
-    )
-}
-export default Checkout
+        // </div>
+)}
+    export default Checkout

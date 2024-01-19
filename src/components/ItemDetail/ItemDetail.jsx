@@ -25,7 +25,7 @@ const ItemDetail = ({ item }) => {
 
     return (
         <div className="container m-auto mt-8 w-full">
-            <Button onClick={handleVolver} className='btnVolver fixed top-21 left-2 rounded-md text-white'> Volver</Button>
+            <Button onClick={handleVolver} className='btnVolver fixed top-21 left-2 rounded-md text-white max-[600px]:sticky'> Volver</Button>
             <h3 className="text-2xl font-semibold">{item.name}</h3>
             <hr />
             <div className="cardContainer flex gap-8 pt-4 max-[600px]:flex max-[600px]:flex-col ">
