@@ -10,10 +10,10 @@ const QuantitySelector = ({ cantidad, stock, setCantidad }) => {
     };
 
     return (
-        <div className="flex gap-4 items-center justify-center">
+        <div className="flex  items-center justify-center gap-3">
             <Button
                 onClick={handleRestar}
-                className={`${cantidad === 1 ? 'bg-red-400' : 'bg-blue-600'} rounded py-2 px-4 text-white font-semibold`}
+                className={`${cantidad === 1 ? 'bg-red-400' : 'bg-blue-600'} rounded py-2 px-4 text-white font-semibold `}
                 disabled={cantidad === 1}
             >
                 -
