@@ -20,7 +20,6 @@ useEffect(() => {
     .then((querySnapShot)=> {
         const docs = querySnapShot.docs.map(doc => ({...doc.data(), id: doc.id}))
 
-        console.log(docs)
         setProductos( docs )
     })
 
